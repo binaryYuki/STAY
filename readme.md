@@ -28,22 +28,20 @@
 
 - **Achieve** your learning goals with a clear, structured roadmap  
 
-**XGBoost ADHD Prediction Model**
-Overview
-This repository contains an XGBoost classification model trained on the HYPERAKTIV dataset 1 to predict Attention-Deficit/Hyperactivity Disorder (ADHD) in adults. The model uses sensor data (actigraphy/heart rate) and clinical assessments to achieve 71% accuracy 1.
-
-Dataset
+## XGBoost ADHD Prediction Model Using SMOTE
+### Overview
+This repository contains an XGBoost classification model trained on the HYPERAKTIV dataset 1 to predict Attention-Deficit/Hyperactivity Disorder (ADHD) in humans. The model uses sensor data (actigraphy/heart rate) and clinical assessments to achieve 71% accuracy 1.
+### Dataset
 The model is trained on the HYPERAKTIV dataset 1 containing:
-103 participants : 51 ADHD patients + 52 clinical controls
-Features :
-Demographics: Age group, sex
-Sensor data: Motor activity (ACC), heart rate variability (HRV)
-Clinical scores: ASRS, WURS, CPT-II, MADRS
-Diagnostic flags: Comorbidities (BIPOLAR, ANXIETY)
-Target: ADHD (1=diagnosed, 0=control)
-Model Architecture
+- **103 participants**: 51 ADHD patients + 52 clinical controls
+### Features
+- **Demographics**: Age group, sex
+- **Sensor data**: Motor activity (ACC), heart rate variability (HRV)
+- **Clinical scores**: ASRS, WURS, CPT-II, MADRS
+- **Diagnostic flags**: Comorbidities (BIPOLAR, ANXIETY)
+- **Target**: ADHD (1=diagnosed, 0=control)
+### Model Architecture
 XGBoost Configuration
-
 ```python
 XGBClassifier(
     objective='binary:logistic',
@@ -53,24 +51,17 @@ XGBClassifier(
     random_state=6
 )
 ```
-
-Preprocessing Pipeline
-Data Cleaning :
-- Deduplicate by ID
-- Cast IDs to UTF-8 strings
-- Handle missing values with fill_null(-1)
-Feature Engineering :
-- Exclude non-predictive columns (ACC_TIME, HRV_TIME)
-- Align train/test IDs using semi-joins 3
-Input Requirements :
-- 811 features (post-feature engineering)
-- All features must be numeric (Polars→Pandas conversion required)
-Usage
-- Installation
-```bash
-pip install polars xgboost scikit-learn joblib
-Inference Example
-```
+### Preprocessing Pipeline
+- **Data Cleaning**:
+  Deduplicate by ID
+  Cast IDs to UTF-8 strings
+  Handle missing values with fill_null(-1)
+- **Feature Engineering**:
+  Exclude non-predictive columns (ACC_TIME, HRV_TIME)
+  Align train/test IDs using semi-joins 3
+- **Input Requirements**:
+  811 features (post-feature engineering)
+  All features must be numeric (Polars→Pandas conversion required)
 Results
 Accuracy
 71%
