@@ -73,4 +73,10 @@ F1-Score
 63%
 
 Example Output :
-[[0.10907203 0.890928]]  # [P(non-ADHD), P(ADHD)]
+`[[0.10907203 0.890928]]  # [P(non-ADHD), P(ADHD)]`
+
+List of references:
+```
+Dunlop, B. W., Wu, R., & Helms, K. (2018). Performance of the Adult ADHD Self-Report Scale-v1.1 in Adults with Major Depressive Disorder.
+Behavioral sciences (Basel, Switzerland), 8(4), 37. https://doi.org/10.3390/bs8040037
+```
