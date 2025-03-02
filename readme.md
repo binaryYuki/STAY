@@ -5,7 +5,7 @@
 </div>
 
 ## 👋🏻 Getting Started
-**Visit https://stay-frontend-topaz.vercel.app/**
+**Visit https://stay.catyuki.com**
 
 ## ⚙️ Technologies Used
 - **Next.js** – React framework for SSR and SSG
