@@ -1,0 +1,6 @@
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/Austin-152/STAY-frontend
+[submodule "backend"]
+	path = backend
+	url = https://github.com/kevhxx/HackLondon2025
